@@ -1,0 +1,26 @@
+<div class="container">
+
+    <div class="main">
+  
+        <!-- Actual search box -->
+        <div class="form-group has-feedback has-search">
+          <span class="glyphicon glyphicon-search form-control-feedback"></span>
+          <input (keyup.enter)="searchData($event)" type="text"   class="form-control" placeholder="Search">
+        </div>
+      </div>
+      <h1>Total Result: {{newsRecords.totalResults ? newsRecords.totalResults : 0}}</h1>
+      <div class="row">
+        <div *ngFor = "let row of newsRecords.articles" class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="{{row.urlToImage}}" alt="...">
+            <div class="caption">
+              <h3><a>{{row.title}}</a></h3>
+              <p>{{row.description}}</p>
+              <p><a href="{{row.url}}" class="btn btn-primary" target="_blank" role="button">Button</a> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+  

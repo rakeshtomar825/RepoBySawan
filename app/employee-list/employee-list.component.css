@@ -1,0 +1,14 @@
+mat-card {
+  width: 80%;
+  margin: auto;
+}
+
+textarea {}
+
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}

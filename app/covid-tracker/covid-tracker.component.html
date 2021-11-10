@@ -1,0 +1,53 @@
+<div class="container">
+<div class="wrapper">
+<h1 style="text-align: center;"><b>India Live Covid Case</b></h1>
+  <ul class="covid-track">
+    <li class="bg-blue">
+       <span class="mob-show">Total </span>
+        <span class="mob-show"><span class="active_per"></span> </span>
+        <span class="mob-show"><strong>{{covidRecords.totalCases}}<span class="down"><br>({{covidRecords.lastUpdatedAtApify}})<i
+        class="fa fa-arrow-down"></i></span></strong></span>
+      </li>
+    <li class="bg-blue">
+        <span class="mob-show">Active case </span>
+        <span class="mob-show"><span class="active_per"></span> </span>
+        <span class="mob-show"><strong>{{covidRecords.activeCases}}<span class="down"><br>({{covidRecords.activeCasesNew}})<i
+        class="fa fa-arrow-down"></i></span></strong></span>
+    </li>
+    <li class="bg-green">
+        <span class="mob-show">Recovered </span>
+        <span class="mob-show"><span class="active_per"></span> </span>
+        <span class="mob-show"><strong>{{covidRecords.recovered}}<span class="down"><br>({{covidRecords.recoveredNew}})<i
+        class="fa fa-arrow-down"></i></span></strong></span>
+    </li>
+    <li class="bg-red">
+        <span class="mob-show">Deths </span>
+        <span class="mob-show"><span class="active_per"></span> </span>
+        <span class="mob-show"><strong>{{covidRecords.deaths}}<span class="down"><br>({{covidRecords.deathsNew}})<i
+        class="fa fa-arrow-down"></i></span></strong></span>
+    </li>
+  </ul>
+  <input type="text" (keyup)="searchState($event)" class="form-control form-control-sm" placeholder="Please Enter State Name">
+  <table class="table mt-3">
+      <thead>
+          <tr>
+              <th>State</th>
+              <th>Total Infacted</th>
+              <th>Active Cases</th>
+              <th>Recorved</th>
+              <th>Deths</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let item of covidRecords.regionData;">
+              <td *ngIf="item.newInfected > 0">{{item.region}} <span class="glyphicon glyphicon-triangle-bottom text-success"></span>{{item.newRecovered}}</td>
+              <td *ngIf="item.newInfected < 0">{{item.region}} <span class="glyphicon glyphicon-triangle-top text-warning"></span>{{item.newRecovered}}</td>
+              <td>{{item.totalInfected}}</td>
+              <td>{{item.activeCases}}</td>
+              <td>{{item.recovered}}</td>
+              <td>{{item.deceased}}</td>
+          </tr>
+      </tbody>
+  </table>
+</div></div>
+

@@ -1,0 +1,17 @@
+<form [formGroup] = "formValue">
+    <div class="imgcontainer">
+      <img src="https://d37c7ubwjknfep.cloudfront.net/wp-content/themes/talentedge/images/te_logo.svg" alt="Avatar" height="100px" width="100px"  class="avatar">
+    </div>
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" formControlName="email" placeholder="Enter Username">
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" formControlName="password" placeholder="Enter Password">
+  
+      <button (click)="login()" type="submit"><span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  </form>

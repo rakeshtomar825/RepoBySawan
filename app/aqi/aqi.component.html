@@ -1,0 +1,21 @@
+<div class="container">
+    <h1 style="text-align: center;">
+        Live AQI India
+    </h1>
+    <table class="table mt-3">
+        <thead>
+            <tr class="bg-primary">
+                <th>City</th>
+                <th>AQI</th>
+                <th>Last Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let row of aqiData" [ngClass]="row.aqi <= 100 ? 'green' : (row.aqi <= 300 ? 'yellow' : 'red')" >
+                <td>{{row.city}}</td>
+                <td>{{row.aqi}}</td>
+                <td>{{ Date }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,20 @@
+
+
+.red{
+    background-color: brown;
+    -webkit-transition: .4s all ease-in-out;
+    transition: .4s all ease-in-out;
+}
+
+.yellow{
+    background-color: yellow;
+    -webkit-transition: .4s all ease-in-out;
+    transition: .4s all ease-in-out;
+}
+
+.green{
+    background-color: green;
+    -webkit-transition: .4s all ease-in-out;
+    transition: .4s all ease-in-out;
+}
+
